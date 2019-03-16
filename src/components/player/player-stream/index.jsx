@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-class Player extends React.Component {
+class PlayerStream extends React.Component {
   constructor(props) {
     super(props);
     /* create the variable */
@@ -34,4 +34,4 @@ const mapStateToProps = state => {
   }
 };
 
-export default connect(mapStateToProps, null)(Player);
+export default connect(mapStateToProps, null)(PlayerStream);

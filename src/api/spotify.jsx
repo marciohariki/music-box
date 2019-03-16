@@ -8,10 +8,22 @@ class SpotifyApi {
     })
   }
 
-  get(path) {
-    return this.api.get(path, {
+  getConfig() {
+    return {
       headers: { 'Authorization': `Bearer ${session.getAccessToken()}`}
-    });
+    }
+  }
+
+  get(path) {
+    return this.api.get(path, this.getConfig());
+  }
+
+  put(path) {
+    return this.api.put(path, null, this.getConfig());
+  }
+
+  post(path) {
+    return this.api.post(path, null, this.getConfig());
   }
 }
 

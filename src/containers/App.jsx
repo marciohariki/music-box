@@ -5,7 +5,7 @@ import history from '../core/history';
 import SpotifyLogin from '../components/spotify-auth/spotify-login/SpotifyLogin';
 import SpotifyCallback from '../components/spotify-auth/spotify-callback/SpotifyCallback';
 import UserProfile from '../components/user/profile';
-import Player from '../components/player';
+import Player from './player';
 
 class App extends React.Component {
   render() {

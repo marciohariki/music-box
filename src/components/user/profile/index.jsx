@@ -65,6 +65,11 @@ UserProfile.propTypes = {
   })
 };
 
+UserProfile.defaultProps = {
+  isSignedIn: false,
+  userProfile: null
+};
+
 const mapStateToProps = (state) => {
   return {
     isSignedIn: state.auth.isSignedIn,

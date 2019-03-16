@@ -1,4 +1,4 @@
-import { all, call, fork, put, takeLatest } from 'redux-saga/effects';
+import { call, fork, put, takeLatest } from 'redux-saga/effects';
 
 import spotify from '../../api/spotify';
 import {
@@ -19,7 +19,7 @@ function * playMusicFetchSaga () {
     yield call(fetchPlayMusic);
     yield put(loadPlayMusic());
   } catch (e) {
-    yield call((e) => console.log(e), e);
+    yield call((e) => console.log(`error is ${e}`), e);
   }
 }
 
@@ -46,7 +46,7 @@ function * watchFetchPauseMusic() {
 }
 
 const fetchSkipToNextMusic = async () => {
-  const response = await spotify.put('/me/player/next');
+  const response = await spotify.post('/me/player/next');
   return response.data;
 };
 
@@ -64,7 +64,7 @@ function * watchFetchSkipToNextMusic() {
 }
 
 const fetchSkipToPreviousMusic = async () => {
-  const response = await spotify.put('/me/player/previous');
+  const response = await spotify.post('/me/player/previous');
   return response.data;
 };
 
@@ -82,10 +82,8 @@ function * watchFetchSkipToPreviousMusic() {
 }
 
 export default function * watchFetchMusic () {
-  yield all([
-    fork(watchFetchPlayMusic),
-    fork(watchFetchPauseMusic),
-    fork(watchFetchSkipToNextMusic()),
-    fork(watchFetchSkipToPreviousMusic())
-  ]);
+  yield fork(watchFetchPlayMusic);
+  yield fork(watchFetchPauseMusic);
+  yield fork(watchFetchSkipToNextMusic);
+  yield fork(watchFetchSkipToPreviousMusic);
 }
