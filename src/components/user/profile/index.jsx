@@ -1,30 +1,30 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { arrayOf, bool, number, shape, string } from 'prop-types';
-import { fetchProfile } from '../../../redux/actions';
-import history from '../../../core/history';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { connect } from 'react-redux'
+import { arrayOf, bool, number, shape, string } from 'prop-types'
+import { fetchProfile } from '../../../redux/actions'
+import history from '../../../core/history'
+import { Link } from 'react-router-dom'
 
 class UserProfile extends React.Component {
-  componentDidMount() {
-    this.props.fetchProfile();
+  componentDidMount () {
+    this.props.fetchProfile()
   }
 
-  renderProfile() {
-    const userProfile = this.props.userProfile;
-    const userImage = userProfile.images[0];
+  renderProfile () {
+    const userProfile = this.props.userProfile
+    const userImage = userProfile.images[0]
     return (
       <div className="ui card">
         <div className="image">
-          <img alt={ userProfile.display_name } src={ userImage.url }/>
+          <img alt={userProfile.display_name} src={userImage.url}/>
         </div>
         <div className="content">
-          <p className="header">{ userProfile.display_name }</p>
+          <p className="header">{userProfile.display_name}</p>
           <div className="meta">
-            <span className="email">{ userProfile.email }</span>
+            <span className="email">{userProfile.email}</span>
           </div>
           <div className="description">
-            Has { userProfile.followers.total } followers
+            Has {userProfile.followers.total} followers
           </div>
         </div>
         <Link to={'/player'} className='ui button primary'>
@@ -34,16 +34,16 @@ class UserProfile extends React.Component {
     )
   }
 
-  render() {
+  render () {
     if (!this.props.isSignedIn) {
-      history.push('/');
+      history.push('/')
       return <div>Redirecting</div>
     }
     if (!this.props.userProfile) {
       return <div>Loading...</div>
     }
 
-    return this.renderProfile();
+    return this.renderProfile()
   }
 }
 
@@ -63,18 +63,18 @@ UserProfile.propTypes = {
       url: string
     }))
   })
-};
+}
 
 UserProfile.defaultProps = {
   isSignedIn: false,
   userProfile: null
-};
+}
 
 const mapStateToProps = (state) => {
   return {
     isSignedIn: state.auth.isSignedIn,
     userProfile: state.user.profile
   }
-};
+}
 
-export default connect(mapStateToProps, {fetchProfile})(UserProfile);
+export default connect(mapStateToProps, { fetchProfile })(UserProfile)

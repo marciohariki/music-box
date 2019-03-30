@@ -1,6 +1,6 @@
-import {combineReducers} from 'redux';
-import spotifyAuthReducer from './spotifyAuthReducer';
-import spotifyProfile from './spotifyProfile';
+import { combineReducers } from 'redux'
+import spotifyAuthReducer from './spotifyAuthReducer'
+import spotifyProfile from './spotifyProfile'
 
 export default combineReducers({
   auth: spotifyAuthReducer,

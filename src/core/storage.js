@@ -1,13 +1,13 @@
-import localStorage from 'localStorage';
+import localStorage from 'localStorage'
 
 class Storage {
-  setItem(key, value) {
-    localStorage.setItem(key, JSON.stringify(value));
+  setItem (key, value) {
+    localStorage.setItem(key, JSON.stringify(value))
   }
 
-  getItem(key) {
-    return JSON.parse(localStorage.getItem(key));
+  getItem (key) {
+    return JSON.parse(localStorage.getItem(key))
   }
 }
 
-export default new Storage();
+export default new Storage()

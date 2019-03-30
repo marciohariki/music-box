@@ -1,31 +1,26 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { func } from 'prop-types';
-import {
-  fetchPauseMusic,
-  fetchPlayMusic,
-  fetchSkipToNextMusic,
-  fetchSkipToPreviousMusic
-} from '../../../redux/actions';
+import React from 'react'
+import { connect } from 'react-redux'
+import { func } from 'prop-types'
+import { fetchPauseMusic, fetchPlayMusic, fetchSkipToNextMusic, fetchSkipToPreviousMusic } from '../../../redux/actions'
 
 class PlayerControls extends React.Component {
   onClickSkipToPreviousMusic = () => {
-    this.props.fetchSkipToPreviousMusic();
-  };
+    this.props.fetchSkipToPreviousMusic()
+  }
 
   onClickSkipToNextMusic = () => {
-    this.props.fetchSkipToNextMusic();
-  };
+    this.props.fetchSkipToNextMusic()
+  }
 
   onClickPlayMusic = () => {
-    this.props.fetchPlayMusic();
-  };
+    this.props.fetchPlayMusic()
+  }
 
   onClickPauseMusic = () => {
-    this.props.fetchPauseMusic();
-  };
+    this.props.fetchPauseMusic()
+  }
 
-  render() {
+  render () {
     return (
       <div className="ui raised">
         <i onClick={this.onClickSkipToPreviousMusic} className="large middle aligned icon step backward"/>
@@ -41,14 +36,14 @@ PlayerControls.propTypes = {
   fetchPlayMusic: func.isRequired,
   fetchPauseMusic: func.isRequired,
   fetchSkipToNextMusic: func.isRequired,
-  fetchSkipToPreviousMusic: func.isRequired,
-};
+  fetchSkipToPreviousMusic: func.isRequired
+}
 
 const actionCreators = {
   fetchPlayMusic,
   fetchPauseMusic,
   fetchSkipToNextMusic,
   fetchSkipToPreviousMusic
-};
+}
 
-export default connect(null, actionCreators)(PlayerControls);
+export default connect(null, actionCreators)(PlayerControls)
