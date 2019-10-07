@@ -4,7 +4,7 @@ import './App.css';
 
 import history from '../core/history'
 import SpotifyCallback from 'components/spotify-auth/spotify-callback/SpotifyCallback'
-import UserProfile from 'components/user/profile'
+import UserProfile from './profile'
 import Player from './player'
 import Home from './home'
 

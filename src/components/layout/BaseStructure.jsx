@@ -1,20 +1,13 @@
 import React, { useState } from 'react'
 import { Layout } from 'antd'
-import SideMenu from './SideMenu'
+import Menu from './Menu'
 import Header from './Header'
 
-const BaseStructure = ({ children }) => {
-  const [visible, setVisible] = useState(true)
-
-  const toggleVissible = () => {
-    setVisible(!visible)
-  }
-
+const BaseStructure = ({ profile, children }) => {
   return (
     <Layout>
-      <SideMenu visible={visible}/>
-      <Layout>
-        <Header menuVisible={visible} onToggle={toggleVissible} />
+      <Menu profile={profile}/>
+      <Layout className="layout">
         <Layout.Content  style={{
           margin: '24px 16px',
           padding: 24,

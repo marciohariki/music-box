@@ -2,41 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="111120e7-8367-4bd5-b551-caf7523e1e2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Kiki.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/BaseStructure.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/SideMenu.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/home/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/Menu.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/MenuProfile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/profile/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Kiki.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Kiki.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/spotify-auth/spotify-login/SpotifyLogin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spotify-auth/spotify-login/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/BaseStructure.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/BaseStructure.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/SideMenu.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/home/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/player/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/player/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/history.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/history.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find />
-      <find>onSpotifyWebPlaybackSDKReady</find>
-      <find>componentDidUpdate</find>
-      <find>watch</find>
-      <find>watchFetchPlayMusic</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +28,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/containers/profile" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -61,9 +43,13 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kiki\WebstormProjects\music-box\src\containers\profile" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/player/player-stream" />
       <recent name="C:\Development\music-box\src\core" />
@@ -117,7 +103,8 @@
       <workItem from="1551794011945" duration="3431000" />
       <workItem from="1551799796540" duration="3766000" />
       <workItem from="1552488411015" duration="4260000" />
-      <workItem from="1570422075767" duration="3198000" />
+      <workItem from="1570422075767" duration="3897000" />
+      <workItem from="1570426025165" duration="2345000" />
     </task>
     <servers />
   </component>
@@ -129,7 +116,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
