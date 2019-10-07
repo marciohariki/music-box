@@ -3,6 +3,7 @@ import React from 'react'
 import SpotifyLogin from 'components/spotify-auth/spotify-login'
 import BaseStructure from 'components/layout/BaseStructure'
 import { connect } from 'react-redux'
+import { menuProfileSelector } from '../../redux/selector/profile'
 
 class Home extends React.Component {
   render () {
@@ -15,19 +16,13 @@ class Home extends React.Component {
   }
 }
 
-const mapStatetoProps = (state) => {
-  const profile = state.user.profile
-  if (!profile) {
-    return {}
-  }
-  const { display_name, email, images } = profile
+
+const mapStateToProps = (state) => {
+  const profile = menuProfileSelector(state)
   return {
-    profile: {
-      name: display_name,
-      email: email,
-      imageUrl: !!images.length && images[0].url
-    }
+    isSignedIn: state.auth.isSignedIn,
+    profile
   }
 }
 
-export default connect(mapStatetoProps, null)(Home)
+export default connect(mapStateToProps, null)(Home)

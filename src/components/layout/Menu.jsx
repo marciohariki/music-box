@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes, { shape } from 'prop-types'
+import { shape, string } from 'prop-types'
 import styled from 'styled-components'
 import { Layout, Menu as MenuAntd } from 'antd'
 import MenuProfile from './MenuProfile'
@@ -30,19 +30,9 @@ const Menu = ({ profile }) => {
 }
 
 Menu.propTypes = {
-  profile: PropTypes.shape({
-    birthdate: PropTypes.string,
-    country: PropTypes.string,
-    display_name: PropTypes.string,
-    email: PropTypes.string,
-    followers: PropTypes.shape({
-      href: PropTypes.string,
-      total: PropTypes.number
-    }),
-    images: PropTypes.arrayOf(shape({
-      height: PropTypes.number,
-      url: PropTypes.string
-    }))
+  profile: shape({
+    name: string,
+    imgUrl: string
   })
 }
 

@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Layout } from 'antd'
 import Menu from './Menu'
-import Header from './Header'
+import { shape, string } from 'prop-types'
 
 const BaseStructure = ({ profile, children }) => {
   return (
@@ -19,6 +19,13 @@ const BaseStructure = ({ profile, children }) => {
       </Layout>
     </Layout>
   )
+}
+
+BaseStructure.propTypes = {
+  profile: shape({
+    name: string,
+    imgUrl: string
+  })
 }
 
 export default BaseStructure

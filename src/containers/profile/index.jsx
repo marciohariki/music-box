@@ -4,7 +4,8 @@ import { arrayOf, bool, number, shape, string } from 'prop-types'
 import { fetchProfile } from 'redux/actions'
 import history from 'core/history'
 import { Link } from 'react-router-dom'
-import BaseStructure from '../../components/layout/BaseStructure'
+import BaseStructure from 'components/layout/BaseStructure'
+import { menuProfileSelector } from 'redux/selector/profile'
 
 class UserProfile extends React.Component {
   componentDidMount () {
@@ -12,37 +13,24 @@ class UserProfile extends React.Component {
   }
 
   renderProfile () {
-    const userProfile = this.props.userProfile
-    const userImage = userProfile.images[0]
+    const { profile } = this.props
     return (
-      <BaseStructure profile={userProfile}>
-        <div className="ui card">
-          <div className="image">
-            <img alt={userProfile.display_name} src={userImage.url}/>
-          </div>
-          <div className="content">
-            <p className="header">{userProfile.display_name}</p>
-            <div className="meta">
-              <span className="email">{userProfile.email}</span>
-            </div>
-            <div className="description">
-              Has {userProfile.followers.total} followers
-            </div>
-          </div>
-          <Link to={'/player'} className='ui button primary'>
-            Go to Player
-          </Link>
-        </div>
+      <BaseStructure profile={profile}>
+        <Link to={'/player'} className='ui button primary'>
+          Go to Player
+        </Link>
       </BaseStructure>
     )
   }
 
   render () {
-    if (!this.props.isSignedIn) {
+    const { isSignedIn, profile } = this.props
+
+    if (!isSignedIn) {
       history.push('/')
       return <div>Redirecting</div>
     }
-    if (!this.props.userProfile) {
+    if (!profile) {
       return <div>Loading...</div>
     }
 
@@ -53,18 +41,8 @@ class UserProfile extends React.Component {
 UserProfile.propTypes = {
   isSignedIn: bool,
   userProfile: shape({
-    birthdate: string,
-    country: string,
-    display_name: string,
-    email: string,
-    followers: shape({
-      href: string,
-      total: number
-    }),
-    images: arrayOf(shape({
-      height: number,
-      url: string
-    }))
+    name: string,
+    imgUrl: string
   })
 }
 
@@ -74,9 +52,10 @@ UserProfile.defaultProps = {
 }
 
 const mapStateToProps = (state) => {
+  const profile = menuProfileSelector(state)
   return {
     isSignedIn: state.auth.isSignedIn,
-    userProfile: state.user.profile
+    profile
   }
 }
 

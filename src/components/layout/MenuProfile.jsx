@@ -1,16 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
+import { shape, string } from 'prop-types'
 
-const MenuProfile = ({ display_name, images }) => {
+const MenuProfile = ({ name, imgUrl }) => {
   return (
     <S.Profile>
       <S.Content>
-        <S.Name>{display_name}</S.Name>
+        <S.Name>{name}</S.Name>
       </S.Content>
-      <S.Image src={images[0].url} />
+      <S.Image src={imgUrl} />
     </S.Profile>
   )
 }
+
+MenuProfile.propTypes = {
+  name: string,
+  imgUrl: string
+}
+
 
 export default MenuProfile
 
