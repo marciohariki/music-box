@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { shape, string } from 'prop-types'
+import { string } from 'prop-types'
 
 const MenuProfile = ({ name, imgUrl }) => {
   return (
@@ -17,7 +17,6 @@ MenuProfile.propTypes = {
   name: string,
   imgUrl: string
 }
-
 
 export default MenuProfile
 
@@ -48,5 +47,5 @@ const S = {
   Email: styled.div`
     margin: 0;
     line-height: 16px;
-  `,
+  `
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { arrayOf, bool, number, shape, string } from 'prop-types'
+import { bool, shape, string } from 'prop-types'
 import { fetchProfile } from 'redux/actions'
 import history from 'core/history'
 import { Link } from 'react-router-dom'
