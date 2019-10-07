@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
 
-import spotify from '../../api/spotify'
+import spotify from 'api/spotify'
 import { FETCH_PROFILE } from '../actions/types'
 import { loadProfile } from '../actions'
 

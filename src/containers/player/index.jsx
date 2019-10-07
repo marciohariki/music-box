@@ -1,15 +1,22 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import PlayerStream from '../../components/player/player-stream'
-import PlayerControls from '../../components/player/player-controls'
+import { menuProfileSelector } from 'redux/selector/profile'
+import { fetchProfile } from 'redux/actions'
+
+import PlayerStream from 'components/player/player-stream'
+import PlayerControls from 'components/player/player-controls'
 import BaseStructure from 'components/layout/BaseStructure'
-import { menuProfileSelector } from '../../redux/selector/profile'
 
 class Player extends React.Component {
+  componentDidMount () {
+    this.props.fetchProfile()
+  }
+
   render () {
+    const { profile } = this.props
     return (
-      <BaseStructure>
+      <BaseStructure profile={profile}>
         <PlayerStream/>
         <PlayerControls/>
       </BaseStructure>
@@ -26,4 +33,8 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, null)(Player)
+const mapDispatchToProps = {
+  fetchProfile
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Player)
