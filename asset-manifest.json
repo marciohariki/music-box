@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/music-box/static/css/main.8a99a7b9.chunk.css",
+    "main.js": "/music-box/static/js/main.82b77ca7.chunk.js",
+    "main.js.map": "/music-box/static/js/main.82b77ca7.chunk.js.map",
+    "runtime-main.js": "/music-box/static/js/runtime-main.7c1987f7.js",
+    "runtime-main.js.map": "/music-box/static/js/runtime-main.7c1987f7.js.map",
+    "static/css/2.802837ff.chunk.css": "/music-box/static/css/2.802837ff.chunk.css",
+    "static/js/2.7502b364.chunk.js": "/music-box/static/js/2.7502b364.chunk.js",
+    "static/js/2.7502b364.chunk.js.map": "/music-box/static/js/2.7502b364.chunk.js.map",
+    "index.html": "/music-box/index.html",
+    "precache-manifest.335f1c49cae6f2eb68b23216a28f141b.js": "/music-box/precache-manifest.335f1c49cae6f2eb68b23216a28f141b.js",
+    "service-worker.js": "/music-box/service-worker.js",
+    "static/css/2.802837ff.chunk.css.map": "/music-box/static/css/2.802837ff.chunk.css.map",
+    "static/css/main.8a99a7b9.chunk.css.map": "/music-box/static/css/main.8a99a7b9.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7c1987f7.js",
+    "static/css/2.802837ff.chunk.css",
+    "static/js/2.7502b364.chunk.js",
+    "static/css/main.8a99a7b9.chunk.css",
+    "static/js/main.82b77ca7.chunk.js"
+  ]
+}
