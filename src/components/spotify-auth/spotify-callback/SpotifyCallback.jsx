@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { signIn } from '../../../redux/actions'
-import history from '../../../core/history'
+import { signIn } from 'redux/actions'
+import { Redirect } from 'react-router-dom'
 
 class SpotifyCallback extends React.Component {
   componentDidMount () {
@@ -9,13 +9,22 @@ class SpotifyCallback extends React.Component {
     const r = /([^&;=]+)=?([^&;]*)/g
     const userAccessToken = r.exec(hash)[2]
     this.props.signIn(userAccessToken)
-
-    history.push('/profile')
   }
 
   render () {
+    const { isSignedIn } = this.props
+    if (isSignedIn) {
+      return <Redirect to="/" />
+    }
+
     return <div>You have signed in. Redirecting to player...</div>
   }
 }
 
-export default connect(null, { signIn })(SpotifyCallback)
+const mapStateToProps = (state) => {
+  return {
+    isSignedIn: state.auth.isSignedIn
+  }
+}
+
+export default connect(mapStateToProps, { signIn })(SpotifyCallback)

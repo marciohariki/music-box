@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { arrayOf, bool, number, shape, string } from 'prop-types'
 import { fetchProfile } from '../../../redux/actions'
 import history from '../../../core/history'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 class UserProfile extends React.Component {
   componentDidMount () {
@@ -36,8 +36,7 @@ class UserProfile extends React.Component {
 
   render () {
     if (!this.props.isSignedIn) {
-      history.push('/')
-      return <div>Redirecting</div>
+      return <Redirect to='/' />
     }
     if (!this.props.userProfile) {
       return <div>Loading...</div>

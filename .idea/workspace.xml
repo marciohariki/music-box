@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="111120e7-8367-4bd5-b551-caf7523e1e2b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/spotify-auth/spotify-callback/SpotifyCallback.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spotify-auth/spotify-callback/SpotifyCallback.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/spotify-auth/spotify-login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spotify-auth/spotify-login/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/user/profile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/profile/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/profile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/profile/index.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +99,7 @@
       <workItem from="1551799796540" duration="3766000" />
       <workItem from="1552488411015" duration="4260000" />
       <workItem from="1570422075767" duration="3897000" />
-      <workItem from="1570426025165" duration="4878000" />
+      <workItem from="1570426025165" duration="5310000" />
     </task>
     <servers />
   </component>

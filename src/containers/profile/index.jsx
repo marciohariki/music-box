@@ -2,8 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bool, shape, string } from 'prop-types'
 import { fetchProfile } from 'redux/actions'
-import history from 'core/history'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import BaseStructure from 'components/layout/BaseStructure'
 import { menuProfileSelector } from 'redux/selector/profile'
 
@@ -27,8 +26,7 @@ class UserProfile extends React.Component {
     const { isSignedIn, profile } = this.props
 
     if (!isSignedIn) {
-      history.push('/')
-      return <div>Redirecting</div>
+      return <Redirect to='/' />
     }
     if (!profile) {
       return <div>Loading...</div>
