@@ -2,7 +2,7 @@
   "name": "music-box",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://marciohariki.github.io/music-box",
+  "homepage": "https://marciohariki.github.io/music-box",
   "dependencies": {
     "antd": "^3.23.6",
     "axios": "^0.18.0",
