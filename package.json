@@ -5,7 +5,7 @@
   "homepage": "https://marciohariki.github.io/music-box/",
   "dependencies": {
     "antd": "^3.23.6",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "localStorage": "^1.0.4",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
